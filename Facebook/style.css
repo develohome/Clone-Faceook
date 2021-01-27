@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+li p{
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 1em;
+}
+#container{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: 'headerTop headerTop headerTop';
+    grid-template-rows: 9vh auto;
+    background: #18191A;
+    color: #D1D3D8;
+}
+li{
+    list-style: none;
+}
+header#top{
+    grid-area: headerTop;
+    background: #242526;
+    border-bottom: 1px solid #393A3B;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    
+}   
+.headTop{
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+}
+header#top span{
+    background: #F02849;
+    font-size: 0.8em;
+    color: #fff;
+    padding: 3px 6px;
+    border-radius: 50%;
+    font-family: sans-serif;
+    margin-left: -8px;
+    margin-top: -30px;
+}
+#headLeft{
+    
+}
+#headLeft input[type=search]{
+    background: #3A3B3C;
+    border: none;
+    height: 6vh;
+    border-radius: 20px;
+    padding: 10px 30px;
+    color: #A8ABAF;
+    font-size: .9rem;
+    outline: none;
+}
+#headCenter{
+    
+}
+#headCenter ul{
+    display: flex;
+    width: 100%;
+}
+#headCenter li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    height: 8vh;
+    position: relative;
+}
+#headCenter li{
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+
+#headRight ul{
+    display: flex;
+    width: 100%;
+}
+#headRight li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    height: 8vh;
+}
+#headRight li{
+    cursor: pointer;
+    border-radius: 10px;
+}
+#headRight li img{
+    border-radius: 50%;
+    margin-right: 5px;
+}
+#headCenter li:hover{
+    background-color: #3A3B3C;
+}
+
+#headRight ul{
+    display: flex;
+}
+#headRight i{
+    background-color: #3A3B3C;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+.fa-facebook-f{
+    font-size: 2em;
+    color: #fff;
+    padding: 10px 10px 0 10px;
+    background:linear-gradient(to top,#0572E6, #097EEB, #15A4FA) ;
+    margin-right: 10px;
+    border-radius: 100%;
+}
+
+
+::-webkit-input-placeholder{
+    color: #A8ABAF;
+}
+
+
+
+
+.fa-facebook-f{
+    font-size: 2em;
+    color: #fff;
+    padding: 10px 10px 0 10px;
+    background:linear-gradient(to top,#0572E6, #097EEB, #15A4FA) ;
+    margin-right: 10px;
+    border-radius: 100%;
+}
+#headCenter .fa, #headCenter .fas, #headCenter .far, #headCenter .material-icons{
+    display: flex;
+    align-items: center;
+    
+    font-size: 1.5em;
+    padding: 4px 2px;
+}
+
+#headCenter .material-icons{
+    font-size:  2em;
+}
+#headCenter .fa-users{
+    border-radius: 50%;
+    border: 2px solid #B0B3B8;
+    font-size: 1.1em;
+}
+#headdCenter .fa-store{
+    font-size: 1.3em;
+}
+
+
+.HeaderAtivo{
+    color: #2D88FF;
+    position: relative;
+    height: 100%;
+}
+.HeaderAtivo:hover li{
+    
+    background: none;
+}
+li .HeaderAtivo::before{
+    content: '';
+    position: absolute;
+    background: #2D88FF;
+    width: 300%;
+    height: 3px;
+    left: -100%;
+    bottom: -3px;
+}
+/*
+    Dark : header => background: #242526;  icones:#B0B3B8;Ativos:#2D88FF;
+           body = > background:#18191A;
+    ---------------------------------------------------------------------
+    Light : header => background: #FFFFFF;  icones:#65676B;Ativos:#1877F2;
+           body = > background:#F0F2F5;
+
+*/
+#background{
+    display: none;
+}
+#background:checked ~ #container{
+    background: #F0F2F5;
+    color: #65676B ;
+}
+#background:checked ~ #container header{
+    background-color: #ffffff;
+    border-bottom: 1px solid #DDDFE2;
+}
+
+#background:checked ~ #container #headLeft input[type=search]{
+    background: #F0F2F5;
+}
+#background:checked ~ #container #headCenter .fa-users{
+    border: 2px solid#65676B;
+}
+#background:checked ~ #container #headRight{
+    color: #050505;
+}
+#background:checked ~ #container #headRight i{
+    color: #050505;
+    background: #E4E6EB;
+}
